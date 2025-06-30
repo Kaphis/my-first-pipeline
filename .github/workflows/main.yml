@@ -1,0 +1,16 @@
+name: A Demo CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository code
+        uses: actions/checkout@v4
+
+      - name: Run a simple test command
+        run: echo "Hello, world! The pipeline is running!"
